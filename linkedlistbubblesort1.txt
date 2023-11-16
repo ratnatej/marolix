@@ -1,0 +1,356 @@
+5 -> 2 -> 3 -> 1 -> 8 -> 7 -> 9 -> 6 -> 4 -> None
+
+self.head = obj5
+end = None
+prev = None
+current = obj5
+nextNode = obj2
+current.data = 5
+nextNode.data = 2
+current.next = nextNode.next ---> obj2 = obj3 ---> 3 -> 3
+nextNode.next = current ---> obj2 = obj5
+self.head = obj2
+current = obj2
+nextNode = obj5
+prev = obj2
+current = obj5
+----------------------------------------------------------
+2 -> 5 -> 3 -> 1 -> 8 -> 7 -> 9 -> 6 -> 4 -> None
+
+self.head = obj2
+end = None
+prev = obj2
+current = obj5
+nextNode = obj3
+current.data = 5
+nextNode.data = 3
+current.next = 5-->3 == 5-->1
+nextNode.next = obj5
+self.head = obj2 -->obj3
+current = obj3
+nextNode = obj5
+prev =obj3
+current = obj5
+----------------------------------------------------------
+2 -> 3 -> 5 -> 1 -> 8 -> 7 -> 9 -> 6 -> 4 -> None
+
+end = None
+prev = obj3
+current = obj5
+nextNode = obj1
+current.data = 5
+nextNode.data = 1
+current.next = 5-->1::::5-->8
+nextNode.next = obj5
+prev.next = obj3-->obj1
+current = obj1
+nextNode = obj5
+prev =obj1
+current = obj5
+----------------------------------------------------------
+2 -> 3 -> 1 -> 5 -> 8 -> 7 -> 9 -> 6 -> 4 -> None
+
+end = None
+prev =obj1
+current = obj5
+nextNode = obj8
+c.data = 5
+n.data = 8
+prev = obj5
+current = obj8
+---------------------------------------------------------
+2 -> 3 -> 1 -> 5 -> 8 -> 7 -> 9 -> 6 -> 4 -> None
+
+end = None
+prev = obj5
+current = obj8
+nextNode = obj7
+c.data = 8
+n.data = 7
+current.next = nextNode.next = obj8->obj7 =obj8->obj9
+nextNode.next = current = obj7->obj9 = obj-8->obj9
+
+prev.next = obj5-->obj7-->obj8
+current = obj7
+nextNode = obj8
+prev = obj7
+current = obj8
+----------------------------------------------------------
+2 -> 3 -> 1 -> 5 -> 7 -> 8 -> 9 -> 6 -> 4 -> None
+
+end = None
+prev = obj7
+current = obj8
+nextNode = obj9
+prev = obj8
+current = obj 9
+----------------------------------------------------------
+2 -> 3 -> 1 -> 5 -> 7 -> 8 -> 9 -> 6 -> 4 -> None
+
+end = None
+prev = obj8
+current = obj 9
+nextNode = obj6
+c.data = 9
+n.data = 6
+current.next = nextNode.next = 9->6,   9->4
+nextNode.next = current = 6->4,6->9
+
+8->6->9
+curr = obj6
+nn = obj9
+prev = obj6
+current = obj9
+----------------------------------------------------------
+2 -> 3 -> 1 -> 5 -> 7 -> 8 -> 6 -> 9 -> 4 -> None
+
+end = None
+prev = obj6
+current = obj9
+nn = obj4
+
+current.next = nextNode.next = 9->4, 9->None
+nextNode.next = current = 4->none, 4->9
+
+obj6-> obj4 -> obj9-NOne
+curr = obj4
+nn = obj9
+
+prev = obj4
+curr = obj9
+---------------------------------------------------------
+2 -> 3 -> 1 -> 5 -> 7 -> 8 -> 6 -> 4 -> 9 -> None
+end = None
+prev = obj4
+curr = obj9
+
+
+end = obj9
+---------------------------------------------------------
+
+2 -> 3 -> 1 -> 5 -> 7 -> 8 -> 6 -> 4 -> 9 -> None
+end  = obj9
+prev = none
+c = obj2
+nn = 3
+prev = obj 2
+c = obj3
+
+--------------------------------------------
+2 -> 3 -> 1 -> 5 -> 7 -> 8 -> 6 -> 4 -> 9 -> None
+end = obj9
+prev = obj 2
+c = obj3
+nn = obj 1
+nn = current.next 3--->1
+current.next = nextNode.next 3-->1 = 1-->5
+ nextNode.next = current 1--->5 = 3
+prev = obj1
+current = obj3
+-------------------------------------------------------------------
+2 -> 1 -> 3 -> 5 -> 7 -> 8 -> 6 -> 4 -> 9 -> None
+end  = obj9
+prev = obj1
+current = obj3
+nn = obj5
+prev = obj3
+current = obj5
+--------------------------------------------------------------------
+2 -> 1 -> 3 -> 5 -> 7 -> 8 -> 6 -> 4 -> 9 -> None
+end  = obj9
+prev = obj3
+current =obj5
+current.data>nextNode.data: 5>7
+prev = obj 5
+current =obj7
+-------------------------------------------------------------
+2 -> 1 -> 3 -> 5 -> 7 -> 8 -> 6 -> 4 -> 9 -> None
+end  = obj9
+prev = obj 5
+current =obj7
+current.data>nextNode.data: 7>8
+prev = obj7
+current = obj8
+-------------------------------------------------------------
+2 -> 1 -> 3 -> 5 -> 7 -> 8 -> 6 -> 4 -> 9 -> None
+end  = obj9
+prev = obj7
+current = obj8
+nn = obj6
+current.next = nextNode.next 8-->6 = 6-->4
+  nextNode.next = current 6-->4 = 8
+prev = obj6
+current =obj8
+-------------------------------------------------------------------------
+2 -> 1 -> 3 -> 5 -> 7 -> 6 -> 8 -> 4 -> 9 -> None
+end  = obj9
+prev = obj6
+current =obj8
+nn = obj 4
+current.next = nextNode.next 8-->4 = 4-->9
+  nextNode.next = current 4-->9 = 8
+prev = obj4
+current = obj8
+----------------------------------------------------------------
+2 -> 1 -> 3 -> 5 -> 7 -> 6 -> 4 -> 8 -> 9 -> None
+end  = obj9
+prev = obj4
+current = obj8
+end = obj8
+--------------------------------------------------------
+2 -> 1 -> 3 -> 5 -> 7 -> 6 -> 4 -> 8 -> 9 -> None
+end = obj8
+prev = none
+current = obj2 
+nn = obj1
+current.data>nextNode.data:  2>1
+current.next = nextNode.next 2-->1 = 1->3
+nextNode.next = current 1--->3 =2
+self.head = nextNode 2 = 1
+prev = obj1
+current = obj2
+--------------------------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 7 -> 6 -> 4 -> 8 -> 9 -> None
+end = obj8
+prev = obj1
+current = obj2
+current.data>nextNode.data: 2>3
+prev = obj2
+current = obj3
+----------------------------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 7 -> 6 -> 4 -> 8 -> 9 -> None
+end = obj8
+prev = obj2
+current = obj3
+nn = obj5
+current.data>nextNode.data:3 >5
+prev = obj3
+current = obj5
+--------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 7 -> 6 -> 4 -> 8 -> 9 -> None
+end = obj8
+prev = obj5
+current = obj7
+nn = obj6
+current.next = nextNode.next 5-->6=6-->4
+   nextNode.next = current 6-->4 = 7
+prev = obj6
+current = obj7
+------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 6 -> 7 -> 4 -> 8 -> 9 -> None
+end = obj8
+prev = obj6
+current = obj7 
+nn = obj4
+current.next = nextNode.next  7-->4=4--->8
+  nextNode.next = current  4--->8 = 7
+prev = obj4
+current = obj7
+---------------------------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 6 -> 4 -> 7 -> 8 -> 9 -> None
+end = obj 8
+prev = obj4
+current = obj7
+
+end = obj7
+-------------------------------------------------------------------------
+
+1 -> 2 -> 3 -> 5 -> 6 -> 4 -> 7 -> 8 -> 9 -> None
+end = obj 7
+
+prev  = none 
+current = obj1
+nn = obj 2
+  
+prev = obj1
+current = obj2
+----------------------------------------------------------------------- 
+1 -> 2 -> 3 -> 5 -> 6 -> 4 -> 7 -> 8 -> 9 -> None
+end = obj7
+
+prev = obj1
+current = obj2
+nn = obj3
+
+prev =  obj2
+current = obj3
+---------------------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 6 -> 4 -> 7 -> 8 -> 9 -> None
+end = obj7
+prev = obj2
+current = obj3
+nn = obj5
+
+prev = obj3
+current = obj5
+----------------------------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 6 -> 4 -> 7 -> 8 -> 9 -> None
+end = obj7
+prev = obj3
+current = obj5
+nn = obj6
+
+prev =obj5
+current = obj6
+---------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 6 -> 4 -> 7 -> 8 -> 9 -> None
+end =obj7
+prev =obj5
+current = obj6
+nn = obj4
+
+prev = ob4 
+current =obj6
+-------------------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 4 -> 6 -> 7 -> 8 -> 9 -> None
+end = obj7
+prev = ob4 
+current =obj6
+
+end = obj6
+-------------------------------------------------------------
+
+1 -> 2 -> 3 -> 5 -> 4 -> 6 -> 7 -> 8 -> 9 -> None
+end = obj6
+prrev = none
+current = obj1
+nn = obj2
+
+
+prev =obj1
+current = obj2
+------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 4 -> 6 -> 7 -> 8 -> 9 -> None
+end = obj6
+prev = obj1
+current = obj2
+nn =3
+
+
+prev= obj2
+current = obj3
+----------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 4 -> 6 -> 7 -> 8 -> 9 -> None
+end = obj6
+prev= obj2
+current = obj3
+nn = obj5
+
+
+prev = obj3
+current = obj5
+----------------------------------------------------------------
+1 -> 2 -> 3 -> 5 -> 4 -> 6 -> 7 -> 8 -> 9 -> None
+end = obj6
+prev = obj3
+current = obj5
+nn = obj4
+current.next = nextNode.next   5-->4 = 4-->6
+   nextNode.next = current 4-->6 = 5
+
+prev =obj 4
+current = obj5
+
+---------------------------------------------------------------
+1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> None
+---------------------------------------------------------------
